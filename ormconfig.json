@@ -1,0 +1,18 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "postgres",
+  "database": "quiz-app",
+  "autoLoadEntities": true,
+  "synchronize": false,
+  "migrationsTableName": "migration",
+  "entities": ["dist/**/**.entity{.ts,.js}"],
+  "migrations": ["dist/database/migrations/*.js"],
+  "cli": {
+    "migrationsDir": "src/database/migrations",
+    "entitiesDir": "src/models"
+  },
+  "ssl": false
+}
